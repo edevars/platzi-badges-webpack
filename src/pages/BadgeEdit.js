@@ -28,7 +28,12 @@ class BadgeEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      const data = await api.badges.read(this.props.match.params.badgeId);
+      const response = await fetch(
+        `https://platzi-badges.edevars.now.sh/api/badges/${
+          this.props.match.params.badgeId
+        }`
+      );
+      const { data } = await response.json();
 
       this.setState({ loading: false, form: data });
     } catch (error) {

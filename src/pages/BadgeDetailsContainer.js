@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import BadgeDetails from './BadgeDetails';
-import PageLoading from '../components/PageLoading';
-import PageError from '../components/PageError';
-import api from '../api';
+import BadgeDetails from "./BadgeDetails";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
+import api from "../api";
 
 class BadgeDetailsContainer extends React.Component {
   state = {
     loading: true,
     error: null,
     data: undefined,
-    modalIsOpen: false,
+    modalIsOpen: false
   };
 
   componentDidMount() {
@@ -21,7 +21,12 @@ class BadgeDetailsContainer extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      const data = await api.badges.read(this.props.match.params.badgeId);
+      const response = await fetch(
+        `https://platzi-badges.edevars.now.sh/api/badges/${
+          this.props.match.params.badgeId
+        }`
+      );
+      const { data } = await response.json();
       this.setState({ loading: false, data: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -43,7 +48,7 @@ class BadgeDetailsContainer extends React.Component {
       await api.badges.remove(this.props.match.params.badgeId);
       this.setState({ loading: false });
 
-      this.props.history.push('/badges');
+      this.props.history.push("/badges");
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
