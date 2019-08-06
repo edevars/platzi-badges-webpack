@@ -1,0 +1,44 @@
+Arguments: 
+  /home/edevars/.nvm/versions/node/v10.16.0/bin/node /usr/share/yarn/bin/yarn.js add -D react react-dom @babel/runtime webpack webpack-cli webpack-dev-server css-loader style-loader file-loader babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-syntax-dynamic-import @babel/plugin-transform-runtime @babel/plugin-proposal-class-propertieshtml-webpack-plugin
+
+PATH: 
+  /home/edevars/.nvm/versions/node/v10.16.0/bin:/usr/lib64/qt-3.3/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/edevars/bin:/var/lib/snapd/snap/bin:/home/edevars/bin:/home/edevars/.local/bin:/home/edevars/.local/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@babel%2fplugin-proposal-class-propertieshtml-webpack-plugin: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66830:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:140464:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141436:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141358:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "platzi-badges-webpack",
+    "version": "1.0.0",
+    "description": "A platzi project configured with webpack 4",
+    "main": "index.js",
+    "repository": "https://github.com/edevars/platzi-badges-webpack",
+    "author": "edevars <e.devars.dev@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
