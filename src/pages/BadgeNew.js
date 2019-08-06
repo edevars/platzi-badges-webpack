@@ -34,7 +34,7 @@ class BadgeNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      var url = "https://platzi-badges.edevars.now.sh/api/badges";
+      let url = "https://platzi-badges.edevars.now.sh/api/badges";
 
       fetch(url, {
         method: "POST",
