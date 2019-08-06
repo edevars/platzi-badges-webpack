@@ -44,14 +44,25 @@ class BadgeDetailsContainer extends React.Component {
   handleDeleteBadge = async e => {
     this.setState({ loading: true, error: null });
 
-    try {
-      await api.badges.remove(this.props.match.params.badgeId);
-      this.setState({ loading: false });
+    let url = `https://platzi-badges.edevars.now.sh/api/badges/${
+      this.props.match.params.badgeId
+    }`;
 
-      this.props.history.push("/badges");
-    } catch (error) {
-      this.setState({ loading: false, error: error });
-    }
+    fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(response => {
+        this.setState({ loading: false });
+        this.props.history.push("/badges");
+      })
+      .catch(error => {
+        this.setState({ loading: false, error: error });
+        console.error("Error:", error);
+      });
   };
 
   render() {
