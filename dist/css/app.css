@@ -10131,7 +10131,7 @@ a.link-unstyled:hover {
 .Home {
   width: 100%;
   min-height: calc(100vh - 60px);
-  background: url(http://localhost:5000/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
+  background: url(/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
   background-repeat: repeat;
 
   color: #ffffff;
@@ -10155,7 +10155,7 @@ a.link-unstyled:hover {
 .Badges__hero {
   width: 100%;
   padding: 2rem 0;
-  background: url(http://localhost:5000/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
+  background: url(/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
   background-repeat: repeat;
   margin-bottom: 1rem;
 }
@@ -10301,7 +10301,7 @@ a.link-unstyled:hover {
 .BadgeNew__hero {
   width: 100%;
   padding: 2rem 0;
-  background: url(http://localhost:5000/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
+  background: url(/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
   background-repeat: repeat;
   margin-bottom: 1rem;
   color: #ffffff;
@@ -10365,7 +10365,7 @@ a.link-unstyled:hover {
 .BadgeDetails__hero {
   width: 100%;
   padding: 2rem 0;
-  background: url(http://localhost:5000/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
+  background: url(/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
   background-repeat: repeat;
   margin-bottom: 1rem;
   color: #ffffff;
@@ -10414,7 +10414,7 @@ a.link-unstyled:hover {
 .BadgeEdit__hero {
   width: 100%;
   padding: 2rem 0;
-  background: url(http://localhost:5000/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
+  background: url(/1d17360a685ac86023b90aa14fd2c62d.svg), #1B1B25;
   background-repeat: repeat;
   margin-bottom: 1rem;
   color: #ffffff;
