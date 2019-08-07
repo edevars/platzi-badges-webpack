@@ -56,8 +56,8 @@ module.exports = {
     }),
     new AddAssetHtmlWebpackPlugin({
       filepath: path.resolve(__dirname, "./dist/js/*.dll.js"),
-      outputPath: "/js",
-      publicPath: ASSET_PATH
+      outputPath: "js",
+      publicPath: "/js"
     })
   ]
 };
