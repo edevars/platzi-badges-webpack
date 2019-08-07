@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const AddAssetHtmlWebpackPlugin = require("add-asset-html-webpack-plugin");
 
+const ASSET_PATH = process.env.ASSET_PATH || "/";
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, "src/index.js")
@@ -11,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].js",
-    publicPath: "http://localhost:5000/",
+    publicPath: ASSET_PATH,
     chunkFilename: "js/[id].[chunkhash].js"
   },
   module: {
@@ -53,9 +55,9 @@ module.exports = {
       manifest: require("./modules-manifest.json")
     }),
     new AddAssetHtmlWebpackPlugin({
-      filepath: path.resolve(__dirname, './dist/js/*.dll.js'),
-      outputPath: 'js',
-      publicPath: "http://localhost:5000/js"
+      filepath: path.resolve(__dirname, "./dist/js/*.dll.js"),
+      outputPath: "js",
+      publicPath: ASSET_PATH
     })
   ]
 };
